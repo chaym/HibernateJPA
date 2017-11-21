@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate- configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+<!-- org.hibernate.dialect.MySQL5Dialect //org.hibernate.dialect.MySQLDialect
+org.hibernate.dialect.MySQLMyISAMDialect OR org.hibernate.dialect.MySQLInnoDBDialect-->
+
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver </property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernatejpa </property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.passsword"></property>
+<property name="hibernate.hbm2ddl.auto">create</property>
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+<mapping resource="com/tn/isamm/Entreprise.hbm.xml"/> 
+<mapping class="isamm.projet.beans.Etudiant"/>
+<mapping class="isamm.projet.beans.Filiere"/>
+<mapping class="isamm.projet.beans.Formateur"/>
+<mapping class="isamm.projet.beans.Matiere"/>
+<mapping class="isamm.projet.beans.Personne"/>
+
+</session-factory>
+</hibernate-configuration>
